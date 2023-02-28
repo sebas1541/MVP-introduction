@@ -1,6 +1,5 @@
 package view;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class View {
@@ -26,4 +25,3 @@ public class View {
         System.out.println(message);
     }
 }
-

@@ -5,43 +5,47 @@ import java.util.ArrayList;
 /**
  * @author sebastiancanoncastellanos
  * @version 1.0
- *
  */
 public class Employees {
 
+    int wagePerHour;
+    ArrayList<String> workers = new ArrayList<String>();
+    ArrayList<Integer> hoursWorked = new ArrayList<Integer>();
 
-    int hoursWorked;
-    int morningWagePerHour = 9000;
-    int afternoonWagePerHour = 10000;
-    ArrayList<String> workers = new ArrayList();
-    //constructors
-    public int getHoursWorked() {
+    public ArrayList<Integer> getHoursWorked() {
         return hoursWorked;
     }
-    public void setHoursWorked(int hoursWorked) {
+
+    public void setHoursWorked(ArrayList<Integer> hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
+
+    //constructors
+
+
+    public int getWagePerHour() {
+        return wagePerHour;
+    }
+
+    public void setWagePerHour(int wagePerHour) {
+        this.wagePerHour = wagePerHour;
+    }
+
     public ArrayList<String> getWorkers() {
         return workers;
     }
+
     public void setWorkers(ArrayList<String> workers) {
         this.workers = workers;
     }
 
-    /*public int morningPayment(int hoursWorked){
-
-        return morningWagePerHour * getHoursWorked();
-    }/*
-
-    /*calcular el costo total de cada turno, mañana y tarde */
-
-   /* public int totalAfternoonPayment(int hoursWorked) {
-        int numberOfEmployees = getWorkers().size();
-        return afternoonWagePerHour * getHoursWorked();
-    }*/
-
-    public int totalMorningPayment() {
-        int numberOfEmployees = getWorkers().size();
-        return numberOfEmployees * morningWagePerHour;
+    public int payment() {
+        int sum = 0;
+        for (int i = 0; i < getHoursWorked().size(); i++) {
+            sum += getHoursWorked().get(i);
+        }
+        int finalWage = sum * getWagePerHour();
+        return (finalWage);
     }
+
 }
