@@ -22,7 +22,6 @@ public class Employees {
 
     //constructors
 
-
     public int getWagePerHour() {
         return wagePerHour;
     }
