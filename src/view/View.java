@@ -15,6 +15,7 @@ public class View {
         return number;
     }
 
+
     public String readString(String message) {
         System.out.println(message);
         String name = console.nextLine();

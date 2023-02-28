@@ -50,6 +50,7 @@ public class Presenter {
         model.setWorkers(employeesArray);
     }
 
+
     public void currentPayroll() {
         ArrayList<Integer> currentHoursWorked = new ArrayList<Integer>();
         System.out.println("Para el horario, trabajaron " + model.getWorkers().size() + " empleados \nPor favor ingrese las horas trabajadas de cada empleado a continuacion");
